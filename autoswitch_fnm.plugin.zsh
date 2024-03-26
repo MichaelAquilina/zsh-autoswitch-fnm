@@ -9,6 +9,7 @@ function _check_fnm_autouse() {
 function _fnm_autouse_startup() {
   add-zsh-hook -D precmd _fnm_autouse_startup
   _check_fnm_autouse
+  add-zsh-hook chpwd _check_fnm_autouse
 }
 
 autoload -Uz add-zsh-hook
