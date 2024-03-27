@@ -9,7 +9,7 @@ function _check_fnm_autouse() {
 function _fnm_autouse_startup() {
   add-zsh-hook -D precmd _fnm_autouse_startup
 
-  if !type fnm; then
+  if ! type fnm > /dev/null; then
     printf "fnm is not installed.\n"
     printf "autoswitch-fnm will not run.\n"
     return
